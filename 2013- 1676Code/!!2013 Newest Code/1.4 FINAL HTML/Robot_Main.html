@@ -1,0 +1,426 @@
+<HTML>
+<HEAD>
+<TITLE>Robot Main.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="Robot Main.vi"></A><H2>Robot Main.vi</H2>
+<P>This VI imlements the framework and scheduler for your robotics program. It should not be necessary to modify the framework. You are expected to add your code to the VIs called from Robot Main, the ones located in the Team Code within the project.</P>
+<P><IMG SRC="Robot_Mainc.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Mainp.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Maind.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Maind1.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Maind2.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Maind3.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Maind4.png" ALT="Robot Main.vi"></P>
+<P><IMG SRC="Robot_Maind5.png" ALT="Robot Main.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="Disabled.vi"></A><H2>Disabled.vi</H2>
+<P>This VI is called each time a disabled packet is received from the DS. It is often used to prepare for the next robot mode, to calibrate sensors, etc.</P>
+<P><IMG SRC="Disabledc.png" ALT="Disabled.vi"></P>
+<P><IMG SRC="Disabledp.png" ALT="Disabled.vi"></P>
+<P><IMG SRC="Disabledd.png" ALT="Disabled.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="Robot Global Data.vi"></A><H2>Robot Global Data.vi</H2>
+<P>This global VI can contain as many global variables as you need. Place a control on the panel, give it a good name. To read or write to it from a VI, drag the icon to the diagram of that VI. You can also drag from the project. Click on the node to change which global you access. You shouldn't have multiple locations writing to a global or it will cause a race-condition.</P>
+<P><IMG SRC="Robot_Global_Datagblc.png" ALT="Robot Global Data.vi"></P>
+<P><IMG SRC="Robot_Global_Datagblp.png" ALT="Robot Global Data.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="Finish.vi"></A><H2>Finish.vi</H2>
+<P>This VI is called just before exiting. It is expected to close I/O refnum, save collected data, etc.</P>
+<P><IMG SRC="Finishc.png" ALT="Finish.vi"></P>
+<P><IMG SRC="Finishd.png" ALT="Finish.vi"></P>
+<P><IMG SRC="Finishd1.png" ALT="Finish.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="Teleop.vi"></A><H2>Teleop.vi</H2>
+<P>This VI is called for each TeleOp packet received from the DS where the robot is not disabled. It is often used to read from the joysticks and update I/O or to update setpoints for timed control loops. It should  complete and return within 20 milliseconds or it may miss DS packets.</P>
+<P><IMG SRC="Teleopc.png" ALT="Teleop.vi"></P>
+<P><IMG SRC="Teleopp.png" ALT="Teleop.vi"></P>
+<P><IMG SRC="Teleopd.png" ALT="Teleop.vi"></P>
+<P><IMG SRC="Teleopd1.png" ALT="Teleop.vi"></P>
+<P><IMG SRC="Teleopd2.png" ALT="Teleop.vi"></P>
+<P><IMG SRC="Teleopd3.png" ALT="Teleop.vi"></P>
+<P><IMG SRC="Teleopd4.png" ALT="Teleop.vi"></P>
+<P><IMG SRC="Teleopd5.png" ALT="Teleop.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="Feeder.vi"></A><H2>Feeder.vi</H2>
+<P></P>
+<P><IMG SRC="Feederc.png" ALT="Feeder.vi"></P>
+<P><IMG SRC="Feederp.png" ALT="Feeder.vi"></P>
+<P><IMG SRC="Feederd.png" ALT="Feeder.vi"></P>
+<P><IMG SRC="Feederd1.png" ALT="Feeder.vi"></P>
+<P><IMG SRC="Feederd2.png" ALT="Feeder.vi"></P>
+<P><IMG SRC="Feederd3.png" ALT="Feeder.vi"></P>
+<P><IMG SRC="Feederd4.png" ALT="Feeder.vi"></P>
+<P><IMG SRC="Feederd5.png" ALT="Feeder.vi"></P>
+<P><IMG SRC="Feederd6.png" ALT="Feeder.vi"></P>
+<P><IMG SRC="Feederd7.png" ALT="Feeder.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="MaxsGettoArcadeDrive.vi"></A><H2>MaxsGettoArcadeDrive.vi</H2>
+<P></P>
+<P><IMG SRC="MaxsGettoArcadeDrivec.png" ALT="MaxsGettoArcadeDrive.vi"></P>
+<P><IMG SRC="MaxsGettoArcadeDrivep.png" ALT="MaxsGettoArcadeDrive.vi"></P>
+<P><IMG SRC="MaxsGettoArcadeDrived.png" ALT="MaxsGettoArcadeDrive.vi"></P>
+<P><IMG SRC="MaxsGettoArcadeDrived1.png" ALT="MaxsGettoArcadeDrive.vi"></P>
+<P><IMG SRC="MaxsGettoArcadeDrived2.png" ALT="MaxsGettoArcadeDrive.vi"></P>
+<P><IMG SRC="MaxsGettoArcadeDrived3.png" ALT="MaxsGettoArcadeDrive.vi"></P>
+<HR>
+<A NAME="Hanger.vi"></A><H2>Hanger.vi</H2>
+<P></P>
+<P><IMG SRC="Hangerc.png" ALT="Hanger.vi"></P>
+<P><IMG SRC="Hangerp.png" ALT="Hanger.vi"></P>
+<P><IMG SRC="Hangerd.png" ALT="Hanger.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="ShooterAngle.vi"></A><H2>ShooterAngle.vi</H2>
+<P></P>
+<P><IMG SRC="ShooterAnglec.png" ALT="ShooterAngle.vi"></P>
+<P><IMG SRC="ShooterAnglep.png" ALT="ShooterAngle.vi"></P>
+<P><IMG SRC="ShooterAngled.png" ALT="ShooterAngle.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="DriveFineAjust.vi"></A><H2>DriveFineAjust.vi</H2>
+<P></P>
+<P><IMG SRC="DriveFineAjustc.png" ALT="DriveFineAjust.vi"></P>
+<P><IMG SRC="DriveFineAjustp.png" ALT="DriveFineAjust.vi"></P>
+<P><IMG SRC="DriveFineAjustd.png" ALT="DriveFineAjust.vi"></P>
+<P><IMG SRC="DriveFineAjustd1.png" ALT="DriveFineAjust.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="Latch.vi"></A><H2>Latch.vi</H2>
+<P></P>
+<P><IMG SRC="Latchc.png" ALT="Latch.vi"></P>
+<P><IMG SRC="Latchp.png" ALT="Latch.vi"></P>
+<P><IMG SRC="Latchd.png" ALT="Latch.vi"></P>
+<P><IMG SRC="Latchd1.png" ALT="Latch.vi"></P>
+<P><IMG SRC="Latchd2.png" ALT="Latch.vi"></P>
+<P><IMG SRC="Latchd3.png" ALT="Latch.vi"></P>
+<HR>
+<A NAME="DAD.vi"></A><H2>DAD.vi</H2>
+<P></P>
+<P><IMG SRC="DADc.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADp.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd1.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd2.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd3.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd4.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd5.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd6.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd7.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd8.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd9.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd10.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd11.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd12.png" ALT="DAD.vi"></P>
+<P><IMG SRC="DADd13.png" ALT="DAD.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="ConvertVoltageToPercentVbs.vi"></A><H2>ConvertVoltageToPercentVbs.vi</H2>
+<P></P>
+<P><IMG SRC="ConvertVoltageToPercentVbsc.png" ALT="ConvertVoltageToPercentVbs.vi"></P>
+<P><IMG SRC="ConvertVoltageToPercentVbsp.png" ALT="ConvertVoltageToPercentVbs.vi"></P>
+<P><IMG SRC="ConvertVoltageToPercentVbsd.png" ALT="ConvertVoltageToPercentVbs.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="ShifterHax.vi"></A><H2>ShifterHax.vi</H2>
+<P></P>
+<P><IMG SRC="ShifterHaxc.png" ALT="ShifterHax.vi"></P>
+<P><IMG SRC="ShifterHaxp.png" ALT="ShifterHax.vi"></P>
+<P><IMG SRC="ShifterHaxd.png" ALT="ShifterHax.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="ShooterSpeedChoose.vi"></A><H2>ShooterSpeedChoose.vi</H2>
+<P></P>
+<P><IMG SRC="ShooterSpeedChoosec.png" ALT="ShooterSpeedChoose.vi"></P>
+<P><IMG SRC="ShooterSpeedChoosep.png" ALT="ShooterSpeedChoose.vi"></P>
+<P><IMG SRC="ShooterSpeedChoosed.png" ALT="ShooterSpeedChoose.vi"></P>
+<P><IMG SRC="ShooterSpeedChoosed1.png" ALT="ShooterSpeedChoose.vi"></P>
+<P><IMG SRC="ShooterSpeedChoosed2.png" ALT="ShooterSpeedChoose.vi"></P>
+<P><IMG SRC="ShooterSpeedChoosed3.png" ALT="ShooterSpeedChoose.vi"></P>
+<P><IMG SRC="ShooterSpeedChoosed4.png" ALT="ShooterSpeedChoose.vi"></P>
+<P><IMG SRC="ShooterSpeedChoosed5.png" ALT="ShooterSpeedChoose.vi"></P>
+<P><IMG SRC="ShooterSpeedChoosed6.png" ALT="ShooterSpeedChoose.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="ConvertPercentVbusToVoltage.vi"></A><H2>ConvertPercentVbusToVoltage.vi</H2>
+<P></P>
+<P><IMG SRC="ConvertPercentVbusToVoltagec.png" ALT="ConvertPercentVbusToVoltage.vi"></P>
+<P><IMG SRC="ConvertPercentVbusToVoltagep.png" ALT="ConvertPercentVbusToVoltage.vi"></P>
+<P><IMG SRC="ConvertPercentVbusToVoltaged.png" ALT="ConvertPercentVbusToVoltage.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="VoltageVbusConvert.vi"></A><H2>VoltageVbusConvert.vi</H2>
+<P></P>
+<P><IMG SRC="VoltageVbusConvertc.png" ALT="VoltageVbusConvert.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="Test.vi"></A><H2>Test.vi</H2>
+<P>This VI is called when test mode begins, and will automatically be terminated when it ends. You can add manual or automatic tests and invoke them from the dashboard.</P>
+<P><IMG SRC="Testc.png" ALT="Test.vi"></P>
+<P><IMG SRC="Testd.png" ALT="Test.vi"></P>
+<P><IMG SRC="Testd1.png" ALT="Test.vi"></P>
+<P><IMG SRC="Testd2.png" ALT="Test.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="Periodic Tasks.vi"></A><H2>Periodic Tasks.vi</H2>
+<P>This VI runs in parallel to other tasks. It can contain as many user-defined periodic loops as you need. These can carry out PID or other sorts of timed response.</P>
+<P><IMG SRC="Periodic_Tasksc.png" ALT="Periodic Tasks.vi"></P>
+<P><IMG SRC="Periodic_Tasksp.png" ALT="Periodic Tasks.vi"></P>
+<P><IMG SRC="Periodic_Tasksd.png" ALT="Periodic Tasks.vi"></P>
+<P><IMG SRC="Periodic_Tasksd1.png" ALT="Periodic Tasks.vi"></P>
+<P><IMG SRC="Periodic_Tasksd2.png" ALT="Periodic Tasks.vi"></P>
+<P><IMG SRC="Periodic_Tasksd3.png" ALT="Periodic Tasks.vi"></P>
+<P><IMG SRC="Periodic_Tasksd4.png" ALT="Periodic Tasks.vi"></P>
+<P><IMG SRC="Periodic_Tasksd5.png" ALT="Periodic Tasks.vi"></P>
+<P><IMG SRC="Periodic_Tasksd6.png" ALT="Periodic Tasks.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="ShooterSpeedDebugV4.1.vi"></A><H2>ShooterSpeedDebugV4.1.vi</H2>
+<P></P>
+<P><IMG SRC="ShooterSpeedDebugV4_1c.png" ALT="ShooterSpeedDebugV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedDebugV4_1p.png" ALT="ShooterSpeedDebugV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedDebugV4_1d.png" ALT="ShooterSpeedDebugV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedDebugV4_1d1.png" ALT="ShooterSpeedDebugV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedDebugV4_1d2.png" ALT="ShooterSpeedDebugV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedDebugV4_1d3.png" ALT="ShooterSpeedDebugV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedDebugV4_1d4.png" ALT="ShooterSpeedDebugV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedDebugV4_1d5.png" ALT="ShooterSpeedDebugV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedDebugV4_1d6.png" ALT="ShooterSpeedDebugV4.1.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="DualEncoder.vi"></A><H2>DualEncoder.vi</H2>
+<P></P>
+<P><IMG SRC="DualEncoderc.png" ALT="DualEncoder.vi"></P>
+<P><IMG SRC="DualEncoderp.png" ALT="DualEncoder.vi"></P>
+<P><IMG SRC="DualEncoderd.png" ALT="DualEncoder.vi"></P>
+<P><IMG SRC="DualEncoderd1.png" ALT="DualEncoder.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="MAX_WPI_UtilitiesFRC FPGATime.vi"></A><H2>MAX_WPI_UtilitiesFRC FPGATime.vi</H2>
+<P>Returns the current time reading of the clock on the FPGA image on the CompactRIO device.</P>
+<P></P>
+<P>The &lt;b&gt;TimeStamp&lt;/b&gt; parameter of the Interrupt Wait VI and the Direct Memory Access (DMA) stream both return the time on the clock.</P>
+<P></P>
+<P>This software is licensed. Open the labview\readme\WPI Robotics Library Open Source License.txt file for more information.</P>
+<P><IMG SRC="MAX__WPI__UtilitiesFRC_FPGATimec.png" ALT="MAX_WPI_UtilitiesFRC FPGATime.vi"></P>
+<P><IMG SRC="MAX__WPI__UtilitiesFRC_FPGATimep.png" ALT="MAX_WPI_UtilitiesFRC FPGATime.vi"></P>
+<P><IMG SRC="MAX__WPI__UtilitiesFRC_FPGATimed.png" ALT="MAX_WPI_UtilitiesFRC FPGATime.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="CheckShooter.vi"></A><H2>CheckShooter.vi</H2>
+<P></P>
+<P><IMG SRC="CheckShooterc.png" ALT="CheckShooter.vi"></P>
+<P><IMG SRC="CheckShooterp.png" ALT="CheckShooter.vi"></P>
+<P><IMG SRC="CheckShooterd.png" ALT="CheckShooter.vi"></P>
+<P><IMG SRC="CheckShooterd1.png" ALT="CheckShooter.vi"></P>
+<P><IMG SRC="CheckShooterd2.png" ALT="CheckShooter.vi"></P>
+<HR>
+<A NAME="ShooterWheelLogicV3.vi"></A><H2>ShooterWheelLogicV3.vi</H2>
+<P></P>
+<P><IMG SRC="ShooterWheelLogicV3c.png" ALT="ShooterWheelLogicV3.vi"></P>
+<P><IMG SRC="ShooterWheelLogicV3p.png" ALT="ShooterWheelLogicV3.vi"></P>
+<P><IMG SRC="ShooterWheelLogicV3d.png" ALT="ShooterWheelLogicV3.vi"></P>
+<P><IMG SRC="ShooterWheelLogicV3d1.png" ALT="ShooterWheelLogicV3.vi"></P>
+<P><IMG SRC="ShooterWheelLogicV3d2.png" ALT="ShooterWheelLogicV3.vi"></P>
+<P><IMG SRC="ShooterWheelLogicV3d3.png" ALT="ShooterWheelLogicV3.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="FIRFilter.vi"></A><H2>FIRFilter.vi</H2>
+<P></P>
+<P><IMG SRC="FIRFilterc.png" ALT="FIRFilter.vi"></P>
+<P><IMG SRC="FIRFilterp.png" ALT="FIRFilter.vi"></P>
+<P><IMG SRC="FIRFilterd.png" ALT="FIRFilter.vi"></P>
+<P><IMG SRC="FIRFilterd1.png" ALT="FIRFilter.vi"></P>
+<HR>
+<A NAME="MaxPIDMain.vi"></A><H2>MaxPIDMain.vi</H2>
+<P></P>
+<P><IMG SRC="MaxPIDMainc.png" ALT="MaxPIDMain.vi"></P>
+<P><IMG SRC="MaxPIDMainp.png" ALT="MaxPIDMain.vi"></P>
+<P><IMG SRC="MaxPIDMaind.png" ALT="MaxPIDMain.vi"></P>
+<P><IMG SRC="MaxPIDMaind1.png" ALT="MaxPIDMain.vi"></P>
+<P><IMG SRC="MaxPIDMaind2.png" ALT="MaxPIDMain.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="MaxPIDDriv.vi"></A><H2>MaxPIDDriv.vi</H2>
+<P></P>
+<P><IMG SRC="MaxPIDDrivc.png" ALT="MaxPIDDriv.vi"></P>
+<P><IMG SRC="MaxPIDDrivp.png" ALT="MaxPIDDriv.vi"></P>
+<P><IMG SRC="MaxPIDDrivd.png" ALT="MaxPIDDriv.vi"></P>
+<P><IMG SRC="MaxPIDDrivd1.png" ALT="MaxPIDDriv.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="MaxPIDIntegral.vi"></A><H2>MaxPIDIntegral.vi</H2>
+<P></P>
+<P><IMG SRC="MaxPIDIntegralc.png" ALT="MaxPIDIntegral.vi"></P>
+<P><IMG SRC="MaxPIDIntegralp.png" ALT="MaxPIDIntegral.vi"></P>
+<P><IMG SRC="MaxPIDIntegrald.png" ALT="MaxPIDIntegral.vi"></P>
+<P><IMG SRC="MaxPIDIntegrald1.png" ALT="MaxPIDIntegral.vi"></P>
+<HR>
+<A NAME="SimpleSetMotor.vi"></A><H2>SimpleSetMotor.vi</H2>
+<P>Specifies the output value or set-point for the motor controller.</P>
+<P></P>
+<P>If you use a Jaguar or Victor motor controller connected to PWM, the scaled value can range from -1.0 to 1.0.</P>
+<P></P>
+<P>If you use a CAN Jaguar, the scale and the units depend on the mode the Jaguar is in.  In <B>Percent VBus</B> mode, the range is the same as the PWM interface.  In <B>Voltage</B>, <B>Current</B>, <B>Speed</B>, and <B>Position</B> modes, the <B>Output</B> is specified in engineering units (Volts, Amps, Rotations/Minute, and Rotations respectively).</P>
+<P></P>
+<P>The output value can be modified by custom scaling if you specify the <B>TransformRef</B> VI reference in the Open VI.  Use this transform if you need to apply a non-linear transformation to the motor control signal to compensate for the characteristics of the motor.</P>
+<P></P>
+<P>This software is licensed. Open the labview\readme\WPI Robotics Library Open Source License.txt file for more information.</P>
+<P><IMG SRC="SimpleSetMotorc.png" ALT="SimpleSetMotor.vi"></P>
+<P><IMG SRC="SimpleSetMotorp.png" ALT="SimpleSetMotor.vi"></P>
+<P><IMG SRC="SimpleSetMotord.png" ALT="SimpleSetMotor.vi"></P>
+<P><IMG SRC="SimpleSetMotord1.png" ALT="SimpleSetMotor.vi"></P>
+<P><IMG SRC="SimpleSetMotord2.png" ALT="SimpleSetMotor.vi"></P>
+<P><IMG SRC="SimpleSetMotord3.png" ALT="SimpleSetMotor.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="ShooterSpeedRegulateV4.1.vi"></A><H2>ShooterSpeedRegulateV4.1.vi</H2>
+<P></P>
+<P><IMG SRC="ShooterSpeedRegulateV4_1c.png" ALT="ShooterSpeedRegulateV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedRegulateV4_1p.png" ALT="ShooterSpeedRegulateV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedRegulateV4_1d.png" ALT="ShooterSpeedRegulateV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedRegulateV4_1d1.png" ALT="ShooterSpeedRegulateV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedRegulateV4_1d2.png" ALT="ShooterSpeedRegulateV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedRegulateV4_1d3.png" ALT="ShooterSpeedRegulateV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedRegulateV4_1d4.png" ALT="ShooterSpeedRegulateV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedRegulateV4_1d5.png" ALT="ShooterSpeedRegulateV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedRegulateV4_1d6.png" ALT="ShooterSpeedRegulateV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedRegulateV4_1d7.png" ALT="ShooterSpeedRegulateV4.1.vi"></P>
+<P><IMG SRC="ShooterSpeedRegulateV4_1d8.png" ALT="ShooterSpeedRegulateV4.1.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="Begin.vi"></A><H2>Begin.vi</H2>
+<P>Called before other user functions, this VI is expected to open initial I/O refnums, load in file data, and do all program initialization.  Notice that the <B>error out</B> terminal is simply used for data flow.  Wiring it to other structures or subVIs ensures that this VI runs first.</P>
+<P><IMG SRC="Beginc.png" ALT="Begin.vi"></P>
+<P><IMG SRC="Beginp.png" ALT="Begin.vi"></P>
+<P><IMG SRC="Begind.png" ALT="Begin.vi"></P>
+<P><IMG SRC="Begind1.png" ALT="Begin.vi"></P>
+<P><IMG SRC="Begind2.png" ALT="Begin.vi"></P>
+<P><IMG SRC="Begind3.png" ALT="Begin.vi"></P>
+<P><IMG SRC="Begind4.png" ALT="Begin.vi"></P>
+<P><IMG SRC="Begind5.png" ALT="Begin.vi"></P>
+<P><IMG SRC="Begind6.png" ALT="Begin.vi"></P>
+<P><IMG SRC="Begind7.png" ALT="Begin.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="Autonomous Independent.vi"></A><H2>Autonomous Independent.vi</H2>
+<P>This VI is called when autonomous begins, and will automatically be terminated when autonomous ends. You can carry out timed or sensor driven robot movement independently without needing to return to the caller.</P>
+<P><IMG SRC="Autonomous_Independentc.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentp.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd1.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd2.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd3.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd4.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd5.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd6.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd7.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd8.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd9.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd10.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd11.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd12.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd13.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd14.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd15.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd16.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd17.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd18.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd19.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd20.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd21.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd22.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd23.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd24.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd25.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd26.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd27.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd28.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd29.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd30.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd31.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd32.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd33.png" ALT="Autonomous Independent.vi"></P>
+<P><IMG SRC="Autonomous_Independentd34.png" ALT="Autonomous Independent.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="AutonDAD.vi"></A><H2>AutonDAD.vi</H2>
+<P></P>
+<P><IMG SRC="AutonDADc.png" ALT="AutonDAD.vi"></P>
+<P><IMG SRC="AutonDADp.png" ALT="AutonDAD.vi"></P>
+<P><IMG SRC="AutonDADd.png" ALT="AutonDAD.vi"></P>
+<P><IMG SRC="AutonDADd1.png" ALT="AutonDAD.vi"></P>
+<P><IMG SRC="AutonDADd2.png" ALT="AutonDAD.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="Manual Turn.vi"></A><H2>Manual Turn.vi</H2>
+<P>This VI is called when autonomous begins, and will automatically be terminated when autonomous ends. You can carry out timed or sensor driven robot movement independently without needing to return to the caller.</P>
+<P><IMG SRC="Manual_Turnc.png" ALT="Manual Turn.vi"></P>
+<P><IMG SRC="Manual_Turnp.png" ALT="Manual Turn.vi"></P>
+<P><IMG SRC="Manual_Turnd.png" ALT="Manual Turn.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="AutoDistanceGyro.vi"></A><H2>AutoDistanceGyro.vi</H2>
+<P>This VI is called when autonomous begins, and will automatically be terminated when autonomous ends. You can carry out timed or sensor driven robot movement independently without needing to return to the caller.</P>
+<P><IMG SRC="AutoDistanceGyroc.png" ALT="AutoDistanceGyro.vi"></P>
+<P><IMG SRC="AutoDistanceGyrop.png" ALT="AutoDistanceGyro.vi"></P>
+<P><IMG SRC="AutoDistanceGyrod.png" ALT="AutoDistanceGyro.vi"></P>
+<P><IMG SRC="AutoDistanceGyrod1.png" ALT="AutoDistanceGyro.vi"></P>
+<P><IMG SRC="AutoDistanceGyrod2.png" ALT="AutoDistanceGyro.vi"></P>
+<P><IMG SRC="AutoDistanceGyrod3.png" ALT="AutoDistanceGyro.vi"></P>
+<P><IMG SRC="AutoDistanceGyrod4.png" ALT="AutoDistanceGyro.vi"></P>
+<Table>
+</Table>
+<HR>
+<A NAME="AutoTurnGyro.vi"></A><H2>AutoTurnGyro.vi</H2>
+<P>This VI is called when autonomous begins, and will automatically be terminated when autonomous ends. You can carry out timed or sensor driven robot movement independently without needing to return to the caller.</P>
+<P><IMG SRC="AutoTurnGyroc.png" ALT="AutoTurnGyro.vi"></P>
+<P><IMG SRC="AutoTurnGyrop.png" ALT="AutoTurnGyro.vi"></P>
+<P><IMG SRC="AutoTurnGyrod.png" ALT="AutoTurnGyro.vi"></P>
+<P><IMG SRC="AutoTurnGyrod1.png" ALT="AutoTurnGyro.vi"></P>
+<P><IMG SRC="AutoTurnGyrod2.png" ALT="AutoTurnGyro.vi"></P>
+<P><IMG SRC="AutoTurnGyrod3.png" ALT="AutoTurnGyro.vi"></P>
+<P><IMG SRC="AutoTurnGyrod4.png" ALT="AutoTurnGyro.vi"></P>
+<P><IMG SRC="AutoTurnGyrod5.png" ALT="AutoTurnGyro.vi"></P>
+<P><IMG SRC="AutoTurnGyrod6.png" ALT="AutoTurnGyro.vi"></P>
+<Table>
+</Table>
+</BODY>
+</HTML>
